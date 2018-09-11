@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>NewsServlet</servlet-name>
+		<servlet-class>com.xkx.newssystem.news.web.servlet.NewsServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>UserServlet</servlet-name>
+		<servlet-class>com.xkx.newssystem.user.web.servlet.UserServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>CommentServlet</servlet-name>
+		<servlet-class>com.xkx.newssystem.news.web.servlet.CommentServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AuthorityServlet</servlet-name>
+		<servlet-class>com.xkx.newssystem.authority.servlet.AuthorityServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewsServlet</servlet-name>
+		<url-pattern>/NewsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserServlet</servlet-name>
+		<url-pattern>/UserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CommentServlet</servlet-name>
+		<url-pattern>/CommentServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AuthorityServlet</servlet-name>
+		<url-pattern>/AuthorityServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- <filter>
+		<filter-name>AuthorityFilter</filter-name>
+		<filter-class>com.xkx.newssystem.authority.filter.AuthorityFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>AuthorityFilter</filter-name>
+		<servlet-name>UserServlet</servlet-name>
+		<servlet-name>NewsServlet</servlet-name>
+		<servlet-name>CommentServlet</servlet-name>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+ -->
+</web-app>
