@@ -19,7 +19,7 @@
 				<tr><td>
 					<c:if test="${requestScope.message.redirectTime < 10}">
 						${requestScope.message.redirectTime}秒后将跳转页面。<br>
-						如果没有跳转,请按 <a href="${requestScope.message.redirectUrl} ">这里</a>!!!
+						如果没有跳转,请按 <a href="${requestScope.message.redirectUrl} ">这里(这是林泽荣修改的)</a>!!!
 					</c:if>				
 					<c:if test="${requestScope.message.redirectTime >= 10}">
 						<a href="javascript:void(0);" onclick="history.go(-1);">返回上一步</a>
